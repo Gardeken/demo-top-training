@@ -1,0 +1,73 @@
+<nav
+  [ngClass]="{ 'overlay pointer-events-none': !isActiveLateral }"
+  class="relative flex bg-[#000b29] text-white justify-between lg:justify-normal items-center"
+>
+  <a href="/">
+    <img class="h-20 p-2" src="/top-training.webp" alt="" />
+  </a>
+  <div class="lg:hidden">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 mr-4"
+      (click)="toggleLateral()"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
+    </svg>
+  </div>
+  <a
+    class="hover:bg-[#0a0965] duration-300 px-10 h-20 hidden lg:grid place-items-center"
+    href="/"
+    >Home</a
+  >
+  <a
+    class="hover:bg-[#0a0965] duration-300 px-10 h-20 hidden lg:grid place-items-center"
+    href=""
+    >Gimnasio</a
+  >
+  <a
+    class="hover:bg-[#0a0965] duration-300 px-10 h-20 hidden lg:grid place-items-center"
+    href=""
+    >Inscribirse</a
+  >
+</nav>
+<div
+  [ngClass]="{ hidden: isActiveLateral }"
+  (click)="toggleLateral()"
+  class="absolute hidden z-40 h-lvh w-full bg-black opacity-50"
+></div>
+<aside
+  [ngClass]="{ '-translate-x-full': isActiveLateral }"
+  class="bg-[#000b29] text-white absolute z-50 h-lvh w-3/4 top-0 flex flex-col duration-300"
+>
+  <div class="flex justify-between mb-8 mt-4">
+    <a href="/">
+      <img class="h-20 p-2" src="/top-training.webp" alt="" />
+    </a>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-8 mr-4"
+      (click)="toggleLateral()"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18 18 6M6 6l12 12"
+      />
+    </svg>
+  </div>
+  <a class="hover:bg-[#0a0965] duration-300 px-10 h-20" href="/">Home</a>
+  <a class="hover:bg-[#0a0965] duration-300 px-10 h-20" href="">Gimnasio</a>
+  <a class="hover:bg-[#0a0965] duration-300 px-10 h-20" href="">Inscribirse</a>
+</aside>

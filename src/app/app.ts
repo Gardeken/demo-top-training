@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { InputApp } from './input/input';
+import { Home } from './home/home';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, InputApp],
+  imports: [RouterOutlet, Home],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
   protected title = 'demo-top-training';
-  name = 'Pedro Centeno';
 }
